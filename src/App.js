@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import NotFound from './pages/404';
 import './App.css';
 import "../src/plugin/font-awesome/css/all.css"
