@@ -1,0 +1,117 @@
+.hoverr {
+  overflow: hidden;
+}
+.hoverr .img{
+  transition: transform .5s ease;
+}
+.hoverr:hover .img {
+  transform: scale(1.1);
+}
+.hover {
+  overflow: hidden;
+}
+.hover img{
+  transition: transform .5s ease;
+}
+.hover:hover img {
+  transform: scale(1.1);
+}
+.perbesar:hover::after{
+    content:"zoom";
+    margin:30px -30px 0 0;
+    position: absolute;
+    background:black;
+    color:white;
+    padding:5px 10px;
+    animation: opacity 0.5s ease;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  80%{
+    opacity:0.8;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.transisi{
+    transition:  background 0.9s ease;
+}
+/* slick css */
+.custom-dot {
+  margin: -30px 0 0 0;
+  width: 60px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 0px;
+  opacity: 0.2;
+}
+
+.custom-dot.active {
+  background-color: white;
+  opacity: 1;
+}
+.custom-dots li {
+  margin-right: 20px;
+}
+.custom-dot-quick {
+  margin: -30px 0 0 0;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-width:3px;
+  border-color:black;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.custom-dot-quick.active {
+  background-color: white;
+  opacity: 1;
+}
+.custom-dots-quick li {
+  margin-right: 4px;
+}
+
+.icon {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.icon:hover{
+  animation: text 0.5s ease;
+}
+@keyframes text {
+  from {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  to {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.box-shadw {
+  box-shadow: 5px 9px 2px #c7c6c4;
+  transition:  background 0.9s ease;
+}   
+  
+.box-shadw:hover{
+    background:#52a388;
+    color:white;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+/* Form css */
+.label::after{
+  content:"*";
+  color:#52a388;
+  margin:0 0 0 10px;
+}
+.rounded-shadow {
+  box-shadow: 5px 5px 2px #c7c6c4;
+}   

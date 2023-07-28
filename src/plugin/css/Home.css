@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.text-stroke {
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+  -webkit-text-fill-color: #52a388;
+  text-fill-color: transparent;
+}
+.text-stroke span {
+    -webkit-text-fill-color: white;
+}
+.text-with-shadow {
+  text-shadow: 5px 5px 2px #c2c0bc;
+}
+.text-decor{
+    font-family: 'Dancing Script', cursive;
+    font-style:italic;
+    text-transform:capitalize;
+}
+.box-shadw {
+  box-shadow: 5px 9px 2px #c7c6c4;
+  transition:  background 0.9s ease;
+}   
+  
+.box-shadw:hover{
+    background:#52a388;
+    color:white;
+    outline-width: 2px;
+    outline-style: solid;
+}
+/* skill */
+.bg-shadow {
+  box-shadow: 5px 5px 1px #bfbcb6;
+}
+.decor{
+  font-family: 'Dancing Script', cursive;
+  font-style:italic;
+}
+
+
+

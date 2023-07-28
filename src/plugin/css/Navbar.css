@@ -1,0 +1,20 @@
+
+.navbar-text {
+    width: 0%;
+    transition: width 2s;
+}
+
+.navbar-text.open {
+    width: 60%;
+}
+
+@media (min-width: 768px) {
+    .navbar-text.open{
+        width:45%;
+    }
+}
+@media (min-width: 640px) {
+    .navbar-text.open{
+        width:35%;
+    }
+}
