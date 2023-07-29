@@ -45,33 +45,33 @@ const SignupForm = ({darkMode}) => {
         <div className='w-[30%] lg:block hidden'>
           <div className='flex items-center mt-4'>
             <i class="fa-regular fa-map px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
-            <div className='w-[20%] h-[2px] bg-black'></div>
-            <div >
-              <h1 className='ms-10 text-black decor text-3xl tracking-widest mb-2'>Address</h1>
+            <div className={`w-[20%] h-[2px] bg-black ${darkMode ? "bg-white" : "bg-black"}`}></div>
+            <div  className={` ${darkMode ? "text-white" : "text-black"}`}>
+              <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Address</h1>
               <p className='ms-10'>Bali, Indonesia</p>
             </div>
           </div>
           <div className='flex items-center mt-10'>
             <i class="fa-regular fa-user px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
-            <div className='w-[21%] h-[2px] bg-black'></div>
-            <div>
-              <h1 className='ms-10 text-black decor text-3xl tracking-widest mb-2'>Pekerjaan</h1>
+            <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
+            <div className={` ${darkMode ? "text-white" : "text-black"}`}>
+              <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Pekerjaan</h1>
               <p className='ms-10'>Mahasiswa</p>
             </div>
           </div>
           <div className='flex items-center mt-10'>
             <i class="fa-regular fa-envelope px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
-            <div className='w-[21%] h-[2px] bg-black'></div>
-            <div>
-              <h1 className='ms-10 text-black decor text-3xl tracking-widest mb-2'>Email</h1>
+            <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
+            <div className={` ${darkMode ? "text-white" : "text-black"}`}>
+              <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Email</h1>
               <p className='ms-10'>Trajust19@gmail.com</p>
             </div>
           </div>
           <div className='flex items-center mt-10'>
             <i class="fa-regular fa-address-book px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
-            <div className='w-[21%] h-[2px] bg-black'></div>
-            <div>
-              <h1 className='ms-10 text-black decor text-3xl tracking-widest mb-2'>Phone</h1>
+            <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
+            <div className={` ${darkMode ? "text-white" : "text-black"}`}>
+              <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Phone</h1>
               <p className='ms-10'>+1 900 - 900 - 9000</p>
             </div>
           </div>
