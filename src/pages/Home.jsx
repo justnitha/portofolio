@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React,{useState, useEffect} from "react"
 import Navbar from "../components/Navbar"
 import Perkenalan from "../components/Section1"
 import Skil from "../components/Skils"
@@ -6,15 +6,27 @@ import Portofolio from "../components/Portofolio"
 import SignupForm from "../components/Form"
 
 function Home () {
-    
+    const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+  useEffect(() => {
+    // Ubah latar belakang halaman sesuai dengan tema gelap/terang
+    if (darkMode) {
+      document.body.style.backgroundColor = "#252931";
+    } else {
+        document.body.style.backgroundColor = "#f1eee8";
+    }
+  }, [darkMode]);
     return(
-        <div className=" bg-[#f1eee8]">
-            <Navbar/>
-            <Perkenalan/>
-            <Skil/>
-            <Portofolio/>
-            <SignupForm/>
-            <footer className="">
+        <div>
+            <Navbar darkMode={darkMode} toogleDarkMode={toggleDarkMode}/>
+            <Perkenalan darkMode={darkMode}/>
+            <Skil darkMode={darkMode}/>
+            <Portofolio darkMode={darkMode}/>
+            <SignupForm darkMode={darkMode}/>
+            <footer className={`${darkMode ? "text-white" : "text-black"}`}>
                 <img src={require("../plugin/img/boba-bawah.png")} alt="gambar5" className="w-[50px]" />
                 <div className="flex items-center justify-between px-10  py-10">
                     <div className=" w-[25%]">

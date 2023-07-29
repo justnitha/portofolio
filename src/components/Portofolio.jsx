@@ -4,7 +4,7 @@ import boba from "../plugin/img/boba.png";
 import "../plugin/css/Portofolio.css";
 import Zoom from "./Zoom";
 
-const Portofolio = () => {
+const Portofolio = ({darkMode}) => {
   const [hoverItem, setHoverItem] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,10 +36,10 @@ const Portofolio = () => {
   }
   return (
     <div className={`px-10 mx-auto mt-32 ${isModalOpen ? "" : ""}`} id="Blog">
-      <h1 className="uppercase text-center text-3xl md:text-5xl lg:text-5xl font-bold">portofolio </h1>
+      <h1 className={`uppercase text-center text-3xl md:text-5xl lg:text-5xl font-bold ${darkMode ? "text-white" : "text-black"}`}>portofolio </h1>
       <p className=" text-hijau font-bold text-center mt-7 mb-10">
         MY{" "}
-        <span className="text-black decor text-3xl tracking-widest">Cases</span>
+        <span className={`text-black decor text-3xl tracking-widest ${darkMode ? "text-white" : "text-black"}`}>Cases</span>
       </p>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-5 lg:gap-10">
         {Portofolio1.map((item) => (
@@ -60,7 +60,7 @@ const Portofolio = () => {
               {hoverItem === item.id && (
                 <div className={`${isModalOpen ? "hidden " : ""}`}>
                   <button
-                    className="absolute lg:ms-[19rem] ms-[11rem] mt-5 border-2 hover:text-white hover:bg-hijau hover:border-white py-2 px-3 rounded-[3rem] perbesar outline-2 outline outline-black transisi"
+                    className="absolute lg:ms-[19rem] hidden lg:block ms-[11rem] mt-5 border-2 hover:text-white hover:bg-hijau hover:border-white py-2 px-3 rounded-[3rem] perbesar outline-2 outline outline-black transisi"
                     onClick={() => handleOpenModal(item.id)}
                   >
                     <i class="fa-solid fa-up-right-and-down-left-from-center"></i>

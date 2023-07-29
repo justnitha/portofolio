@@ -4,7 +4,7 @@ import { ContactSchema } from '../Schema/Contact';
 import "../plugin/css/Portofolio.css";
 
 
-const SignupForm = () => {
+const SignupForm = ({darkMode}) => {
   const [isAccepted, setIsAccepted] = useState(false);
 
   const onSubmit = async (values, actions) =>{
@@ -36,10 +36,10 @@ const SignupForm = () => {
 
   return(
     <div className='mt-24 px-10 lg:px-20 py-10' id="Contact">
-      <h1 className="uppercase text-center text-3xl lg:text-6xl md:text-5xl font-bold">contact me </h1>
+      <h1 className={`uppercase text-center text-3xl lg:text-6xl md:text-5xl font-bold ${darkMode ? "text-white" : "text-black"}`}>contact me </h1>
       <p className=" text-hijau font-bold text-center mt-7 mb-10">
         LET'S
-        <span className="text-black decor lg:text-3xl text-2xl tracking-widest ms-2">Talk About Ideas</span>
+        <span className={`text-black decor lg:text-3xl text-2xl tracking-widest ms-2 ${darkMode ? "text-white" : "text-black"}`}>Talk About Ideas</span>
       </p>
       <div className='lg:flex items-start justify-between mt-10'>
         <div className='w-[30%] lg:block hidden'>
@@ -80,7 +80,7 @@ const SignupForm = () => {
           <form action="" onSubmit={handleSubmit} autoComplete="off">
             <div className='lg:flex md:flex items-center justify-between gap-5'>
               <div className="py-1 lg:w-[50%] md:w-[50%]">
-                <label htmlFor="Nama" className="text-sm label block py-1 uppercase lg:text-base tracking-wider font-bold ms-5">your full name</label>
+                <label htmlFor="Nama" className={`text-sm label block py-1 uppercase lg:text-base tracking-wider font-bold ms-5 ${darkMode ? "text-white" : "text-black"}`}>your full name</label>
                 <input 
                   value={values.Nama}
                   onChange={handleChange}
@@ -95,7 +95,7 @@ const SignupForm = () => {
                 {errors.Nama && touched.Nama && (<p className="error  ms-5 text-red-500">{errors.Nama}</p>)}
               </div>
               <div className="py-1 lg:w-[50%] md:w-[50%] md:mt-0 mt-5 lg:mt-0">
-                <label htmlFor="Email" className="text-sm label block py-1 lg:text-base tracking-wider font-bold uppercase ms-5">your email address</label>
+                <label htmlFor="Email" className={`text-sm label block py-1 uppercase lg:text-base tracking-wider font-bold ms-5 ${darkMode ? "text-white" : "text-black"}`}>your email address</label>
                 <input 
                   value={values.Email}
                   onChange={handleChange}
@@ -111,7 +111,7 @@ const SignupForm = () => {
               </div>
             </div>
             <div className="py-1 mt-5">
-                <label htmlFor="Subject" className="text-sm label block py-1 lg:text-base tracking-wider font-bold uppercase ms-5">your subject</label>
+                <label htmlFor="Subject" className={`text-sm label block py-1 uppercase lg:text-base tracking-wider font-bold ms-5 ${darkMode ? "text-white" : "text-black"}`}>your subject</label>
                 <input 
                   value={values.Subject}
                   onChange={handleChange}
@@ -125,7 +125,7 @@ const SignupForm = () => {
                 {errors.Subject && touched.Subject && (<p className="error ms-5 text-red-500">{errors.Subject}</p>)}
               </div>
             <div className="py-1 mt-5">
-                <label htmlFor="Massage" className="text-sm label block py-1 lg:text-base font-bold uppercase ms-5">your massage</label>
+                <label htmlFor="Massage" className={`text-sm label block py-1 uppercase lg:text-base tracking-wider font-bold ms-5 ${darkMode ? "text-white" : "text-black"}`}>your massage</label>
                 <textarea 
                   value={values.Massage}
                   onChange={handleChange}
@@ -142,7 +142,7 @@ const SignupForm = () => {
               </div>
               <div className='mt-3 lg:flex items-center justify-end gap-7'>
                 <div>
-                  <label htmlFor="Accept" className='text-sm md:text-base lg:text-base'> I accepttext-sm  the terms and conditions</label>
+                  <label htmlFor="Accept" className={`text-sm md:text-base lg:text-base ms-5 ${darkMode ? "text-white" : "text-black"}`}> I accepttext-sm  the terms and conditions</label>
                   <input
                     type="checkbox"
                     name="Accept"
@@ -154,7 +154,7 @@ const SignupForm = () => {
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className=" block mx-auto py-2 px-6 mt-7 lg:mt-4 border-2 hover:border-white outline outline-2 outline-black rounded-3xl uppercase box-shadw">
+                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 border-2 hover:border-white outline outline-2 outline-black rounded-3xl uppercase box-shadw ${darkMode ? "text-white" : "text-black"}`}>
                     send massege
                   </button>
                 </div>
