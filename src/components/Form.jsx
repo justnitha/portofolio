@@ -4,7 +4,7 @@ import { ContactSchema } from '../Schema/Contact';
 import "../plugin/css/Portofolio.css";
 
 
-const SignupForm = ({darkMode}) => {
+const SignupForm = ({darkMode,contactLinkRef}) => {
   const [isAccepted, setIsAccepted] = useState(false);
 
   const onSubmit = async (values, actions) =>{
@@ -35,7 +35,7 @@ const SignupForm = ({darkMode}) => {
   console.log(errors)
 
   return(
-    <div className='mt-24 px-10 lg:px-20 py-10' id="Contact">
+    <div className='mt-24 px-10 lg:px-20 py-10' ref={contactLinkRef}>
       <h1 className={`uppercase text-center text-3xl lg:text-6xl md:text-5xl font-bold ${darkMode ? "text-white" : "text-black"}`}>contact me </h1>
       <p className=" text-hijau font-bold text-center mt-7 mb-10">
         LET'S

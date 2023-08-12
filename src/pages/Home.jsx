@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react"
+import React,{useState, useEffect, useRef} from "react"
 import Navbar from "../components/Navbar"
 import Perkenalan from "../components/Section1"
 import Skil from "../components/Skils"
@@ -19,13 +19,56 @@ function Home () {
         document.body.style.backgroundColor = "#f1eee8";
     }
   }, [darkMode]);
+
+  
+  const homeLinkRef = useRef(null);
+  const skillsLinkRef = useRef(null);
+  const blogLinkRef = useRef(null);
+  const contactLinkRef = useRef(null);
+
+  const scrollToHome = () => {
+    homeLinkRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToSkills = () => {
+    skillsLinkRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBlog = () => {
+    blogLinkRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    contactLinkRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
     return(
         <div>
-            <Navbar darkMode={darkMode} toogleDarkMode={toggleDarkMode}/>
-            <Perkenalan darkMode={darkMode}/>
-            <Skil darkMode={darkMode}/>
-            <Portofolio darkMode={darkMode}/>
-            <SignupForm darkMode={darkMode}/>
+            <Navbar 
+              darkMode={darkMode}
+              toogleDarkMode={toggleDarkMode}
+              scrollToHome={scrollToHome}
+              scrollToSkills={scrollToSkills}
+              scrollToBlog={scrollToBlog}
+              scrollToContact={scrollToContact}
+            />
+            <Perkenalan 
+              darkMode={darkMode} 
+              homeLinkRef={homeLinkRef} 
+              scrollToSkills={scrollToSkills}
+            />
+            <Skil
+              darkMode={darkMode}  
+              skillsLinkRef={skillsLinkRef}
+            />
+            <Portofolio 
+              darkMode={darkMode} 
+              blogLinkRef={blogLinkRef} 
+            />
+            <SignupForm 
+              darkMode={darkMode} 
+              contactLinkRef={contactLinkRef}
+            />
             <footer className={`${darkMode ? "text-white" : "text-black"}`}>
                 <img src={require("../plugin/img/boba-bawah.png")} alt="gambar5" className="w-[50px]" />
                 <div className="flex items-center justify-between px-10  py-10">

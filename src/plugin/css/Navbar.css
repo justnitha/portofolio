@@ -5,17 +5,64 @@
 }
 
 .navbar-text.open {
-    width: 60%;
+    width: 27%;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .navbar-text.open{
-        width:45%;
+        width:15%;
     }
 }
-@media (min-width: 640px) {
+@media screen and (min-width: 640px) {
     .navbar-text.open{
-        width:35%;
+        width:38%;
     }
 }
 
+.navbar{
+    position:absolute;
+   
+    
+}
+.navbar.open{
+    top:4.6rem;
+    animation: buka 2s ease;
+}
+.navbar.close{
+    top:0rem;
+    animation: tutup 2s ease;
+    
+}
+@keyframes tutup {
+    from{
+        top:4.6rem;
+    }
+    to{
+        top:0;
+    }
+}
+@keyframes buka {
+    from{
+        top:0;
+    }
+    to{
+        top:4.6rem;
+    }
+} 
+.dropdown-menuu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: none;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 20;
+  }
+  
+.dropdown-menuu.open {
+    max-height: 100vh;
+  }
+  
+  

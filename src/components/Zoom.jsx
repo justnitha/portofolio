@@ -8,9 +8,9 @@ import "../plugin/css/Portofolio.css";
 const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  // const handleOptionChange = (event) => {
+  //   setSelectedOption(event.target.value);
+  // };
 
   // Fungsi untuk menutup modal
   const handleClose = () => {
@@ -41,7 +41,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
     ),
     customPaging: (index) => (
       <div
-        className={`custom-dot-quick  ${
+        className={`custom-dot-quick mt-[5px] lg:-mt-[30px] ${
           index === activeIndex ? "active " : ""
         }`}
       />
@@ -54,46 +54,76 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      }
+    ]
   };
   return (
     <div>
       {isOpen && (
-        // untuk background
-        <div className="absolute w-full bg-black opacity-50 left-0 top-0 h-[400vh] z-10">
-          <i
-            class="fa-solid fa-xmark cursor-pointer text-white fixed right-2 p-2 fa-2x"
-            onClick={handleClose}
-          ></i>
-        </div>
+        <div className="fixed w-full bg-black opacity-30 left-0 top-0 h-screen z-10"
+          onClick={handleClose} 
+        ></div>
       )}
       {isOpen && (
-        <div className="top-[10rem] left-20 z-50 fixed">
+        <i
+        class="fa-solid fa-xmark cursor-pointer top-0 text-white fixed right-10 pt-5 fa-2x z-20"
+        onClick={handleClose}
+        ></i>
+      )}
+      {isOpen && (
+        <div className=" top-20 left-10 md:top-32 lg:top-[none] lg:left-[none] lg:inset-[9rem] mx-auto h-[29rem] md:h-[50rem] lg:h-[29rem] z-50 fixed w-[78%] md:w-[90%] lg:w-[65%]">
           {Portofolio1.map((item) => {
             if (item.id === selectedItemId) {
               return (
                 <div key={item.id}>
                   <div
-                    className={`grid grid-cols-2 gap-5 bg-white w-[65%] h-[29rem] mx-auto`}
+                    className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg-white h-[29rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
                   >
-                    <Slider {...settings} className="w-[80%] mx-auto mt-10">
+                    <Slider {...settings} className="w-[80%] mx-auto mt-5 lg:mt-10">
                       <img
                         src={item.image}
                         alt="gambar1"
-                        className="h-[20rem]"
+                        className="lg:h-[20rem] object-contain"
                       />
                       <img
                         src={item.image2}
                         alt="gambar2"
-                        className="h-[20rem]"
+                        className="lg:h-[20rem] object-contain"
                       />
                       <img
                         src={item.image3}
                         alt="gambar3"
-                        className="h-[20rem]"
+                        className="lg:h-[20rem] object-contain"
                       />
                     </Slider>
-                    <div className="mt-10 pe-10">
-                      <h1 className="text-center text-xl font-bold">
+                    <div className="lg:mt-10 lg:pe-10 px-5 md:text-2xl ">
+                      <h1 className="text-center text-xl font-bold hidden lg:block">
                         Latihan Menduplicate With <br />
                         <span className="text-hijau">
                           React-js <span className="text-black">dan</span>{" "}
@@ -102,8 +132,8 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                       </h1>
                       
                       <div>
-                        <p className="mt-7">Objek Duplikat : {item.objek}</p>
-                        <p className="mt-4">Tujuan : {item.Tujuan}</p>
+                        <p className="mt-7 font-bold">Objek Duplikat : <a href={`${item.href}`} className="font-normal">{item.objek}</a> </p>
+                        <p className="mt-4 font-bold">Tujuan : <span className="font-normal">{item.Tujuan}</span></p>
                       </div>
                       <div className="flex items-center mt-16 justify-center gap-10">
                         <button className="uppercase">
@@ -125,10 +155,3 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   );
 };
 export default Zoom;
-{
-  /* <div
-className={` bg-white  w-[65%] h-[29rem] mx-auto`}
->
-    sdsadas Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt dolorum voluptatem et, delectus eum, at repudiandae quidem a nulla cum dignissimos ea minus, omnis ratione facilis tempore enim! Vero, aut repudiandae? At velit magnam dolorem qui molestiae temporibus nesciunt iste repellat sapiente harum vero, modi ut iure distinctio! Quam ut, unde iste voluptatem libero, quia ea natus itaque recusandae aspernatur dicta nihil. Dolorem quam eum inventore voluptas aspernatur maxime mollitia beatae voluptates. Delectus veritatis consequatur voluptatem aliquid tenetur quos quaerat dolorem reprehenderit amet temporibus, quas dolore sunt laboriosam, fugiat a, tempora omnis iusto nostrum quia esse id. In, fugiat?
-</div> */
-}
