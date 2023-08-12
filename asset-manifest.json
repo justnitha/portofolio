@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/portofolio/static/css/main.f12183aa.css",
-    "main.js": "/portofolio/static/js/main.40a47535.js",
+    "main.css": "/portofolio/static/css/main.ab6bd148.css",
+    "main.js": "/portofolio/static/js/main.97581bb7.js",
     "static/js/787.b7af92ad.chunk.js": "/portofolio/static/js/787.b7af92ad.chunk.js",
+    "static/media/Wedding-1.png": "/portofolio/static/media/Wedding-1.0c4d4feabf36448731ae.png",
     "static/media/baju1.png": "/portofolio/static/media/baju1.fb29de20adadf472efb2.png",
+    "static/media/Wedding-3.png": "/portofolio/static/media/Wedding-3.97618a5dafff9afbee1d.png",
     "static/media/kulo2.png": "/portofolio/static/media/kulo2.060ce313c52e71690911.png",
     "static/media/porto-2.png": "/portofolio/static/media/porto-2.fd221b4d5c87a7b25983.png",
+    "static/media/Wedding-2.png": "/portofolio/static/media/Wedding-2.bc279399529b29407788.png",
     "static/media/smart1.png": "/portofolio/static/media/smart1.48825393f5e41c03545f.png",
     "static/media/baju2.png": "/portofolio/static/media/baju2.8b7fec30485ddfc3c25e.png",
     "static/media/porto-1.png": "/portofolio/static/media/porto-1.67b7ab0a80734a83481b.png",
@@ -30,12 +33,12 @@
     "static/media/slick.ttf": "/portofolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portofolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portofolio/index.html",
-    "main.f12183aa.css.map": "/portofolio/static/css/main.f12183aa.css.map",
-    "main.40a47535.js.map": "/portofolio/static/js/main.40a47535.js.map",
+    "main.ab6bd148.css.map": "/portofolio/static/css/main.ab6bd148.css.map",
+    "main.97581bb7.js.map": "/portofolio/static/js/main.97581bb7.js.map",
     "787.b7af92ad.chunk.js.map": "/portofolio/static/js/787.b7af92ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f12183aa.css",
-    "static/js/main.40a47535.js"
+    "static/css/main.ab6bd148.css",
+    "static/js/main.97581bb7.js"
   ]
 }
