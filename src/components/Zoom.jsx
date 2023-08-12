@@ -86,7 +86,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   return (
     <div>
       {isOpen && (
-        <div className="fixed w-full bg-black opacity-30 left-0 top-0 h-screen z-10"
+        <div className="fixed w-full bg-black opacity-30 left-0 top-0 h-full z-10"
           onClick={handleClose} 
         ></div>
       )}
@@ -122,7 +122,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                         className="lg:h-[20rem] object-contain"
                       />
                     </Slider>
-                    <div className="lg:mt-10 lg:pe-10 px-5 md:text-2xl ">
+                    <div className="lg:mt-10 lg:pe-10 px-5 md:text-2xl lg:text-xl ">
                       <h1 className="text-center text-xl font-bold hidden lg:block">
                         Latihan Menduplicate With <br />
                         <span className="text-hijau">

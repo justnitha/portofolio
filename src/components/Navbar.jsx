@@ -54,13 +54,6 @@ const Navbar = ({darkMode, toogleDarkMode, scrollToHome, scrollToSkills, scrollT
     };
   }, []);
   
-  // useEffect(()=>{
-  //   var appNav = document.getElementById("appNav")
-  //   if(darkMode && scrollNavbar === true) {
-  //     appNav.classList.add("bg-black")
-  //     appNav.classList.add("text-white")
-  //   } 
-  // })
   return (
     <nav
       className={`flex items-center justify-between px-10 py-10 text-xl sm:text-3xl md:text-3xl lg:text-3xl z-20${
