@@ -90,7 +90,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                   autoComplete='off'
                   placeholder=''
                   onBlur={handleBluer}
-                  className={`mt-2 outline outline-2  px-6 py-4 rounded-3xl ${errors.Nama && touched.Nama ? "input-error w-full":"block mx-auto text-black  w-full "}`} 
+                  className={`mt-2 border-2 border-black  px-6 py-4 rounded-3xl ${errors.Nama && touched.Nama ? "input-error w-full":"block mx-auto text-black  w-full "}`} 
                 />
                 {errors.Nama && touched.Nama && (<p className="error  ms-5 text-red-500">{errors.Nama}</p>)}
               </div>
@@ -105,7 +105,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                   autoComplete="on"
                   placeholder=''
                   onBlur={handleBluer}
-                  className={`mt-2 outline outline-2  px-6 py-4 rounded-3xl ${errors.Email && touched.Email ? "input-error w-full":"block mx-auto text-black  w-full "}`}
+                  className={`mt-2 border-2 border-black  px-6 py-4 rounded-3xl ${errors.Email && touched.Email ? "input-error w-full":"block mx-auto text-black  w-full "}`}
                 />
                 {errors.Email && touched.Email && (<p className="error ms-5 text-red-500">{errors.Email}</p>)}
               </div>
@@ -120,7 +120,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                   id='Subject'
                   placeholder=''
                   onBlur={handleBluer}
-                  className={`mt-2 outline outline-2  px-6 py-4 rounded-3xl ${errors.Subject && touched.Subject ? "input-error w-full":"block mx-auto text-black  w-full "}`} 
+                  className={`mt-2 border-2 border-black  px-6 py-4 rounded-3xl ${errors.Subject && touched.Subject ? "input-error w-full":"block mx-auto text-black  w-full "}`} 
                 />
                 {errors.Subject && touched.Subject && (<p className="error ms-5 text-red-500">{errors.Subject}</p>)}
               </div>
@@ -136,7 +136,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                   rows="4"
                   placeholder=''
                   onBlur={handleBluer}
-                  className={`mt-2 outline outline-2  px-6 py-4 rounded-3xl ${errors.Massage && touched.Massage ? "input-error w-full":"block mx-auto text-black  w-full "}`}  
+                  className={`mt-2 border-2 border-black  px-6 py-4 rounded-3xl ${errors.Massage && touched.Massage ? "input-error w-full":"block mx-auto text-black  w-full "}`}  
                 />
                 {errors.Massage && touched.Massage && (<p className="error ms-5 text-red-500">{errors.Massage}</p>)}
               </div>
@@ -154,7 +154,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 border-2 hover:border-white outline outline-2  rounded-3xl uppercase box-shadw ${darkMode ? "text-white" : "text-black"}`}>
+                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4  hover:border-white border-2 border-black  rounded-3xl uppercase box-shadw ${darkMode ? "text-white" : "text-black"}`}>
                     send massege
                   </button>
                 </div>
