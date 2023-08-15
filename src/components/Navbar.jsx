@@ -95,10 +95,10 @@ const Navbar = ({darkMode, toogleDarkMode, scrollToHome, scrollToSkills, scrollT
               alt=""
               className="h-[90vh]"/>
             <ul className=" uppercase text-2xl leading-[3rem] font-bold ">
-              <li className="hover:text-hijau"><button onClick={scrollToHome}>Home</button></li>
-              <li className="hover:text-hijau"><button onClick={scrollToSkills}>Skils</button></li>
-              <li className="hover:text-hijau"><button onClick={scrollToBlog}>Blog</button></li>
-              <li className="hover:text-hijau"><button onClick={scrollToContact}>Contact</button></li>
+              <li className="hover:text-hijau"><button className="uppercase" onClick={scrollToHome}>Home</button></li>
+              <li className="hover:text-hijau"><button className="uppercase" onClick={scrollToSkills}>Skils</button></li>
+              <li className="hover:text-hijau"><button className="uppercase" onClick={scrollToBlog}>Blog</button></li>
+              <li className="hover:text-hijau"><button className="uppercase" onClick={scrollToContact}>Contact</button></li>
             </ul>
           </div>
         </div>
@@ -120,10 +120,10 @@ const Navbar = ({darkMode, toogleDarkMode, scrollToHome, scrollToSkills, scrollT
         </div>
                 <div className={`dropdown-menuu h-screen  ${isOpen ? 'open ' : ''}`} onClick={toggleDropdown}>
                     <ul className=" text-amber-950 bg-white max-sm:text-sm pb-5 sm:text-xs font-semibold" onClick={handleSliderClick}>
-                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToHome} className="w-full text-start py-2">Home</button></li>
-                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToSkills} className="w-full text-start py-2">Skils</button></li>
-                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToBlog} className="w-full text-start py-2">Blog</button></li>
-                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToContact} className="w-full text-start py-2">Contact</button></li>
+                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToHome} className="w-full text-start py-2 uppercase">Home</button></li>
+                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToSkills} className="w-full text-start py-2 uppercase">Skils</button></li>
+                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToBlog} className="w-full text-start py-2 uppercase">Blog</button></li>
+                      <li className="hover:text-hijau px-10 hover:bg-abu-abu-100 cursor-pointer"><button onClick={scrollToContact} className="w-full text-start py-2 uppercase">Contact</button></li>
                     </ul>
                 </div>
             </div>

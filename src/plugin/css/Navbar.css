@@ -10,12 +10,17 @@
 
 @media screen and (min-width: 768px) {
     .navbar-text.open{
-        width:15%;
+        width:25%;
     }
 }
 @media screen and (min-width: 640px) {
     .navbar-text.open{
-        width:38%;
+        width:35%;
+    }
+}
+@media screen and (min-width: 1240px) {
+    .navbar-text.open{
+        width:25%;
     }
 }
 
