@@ -24,8 +24,8 @@ export const Portofolio1=[
         image:require("../../plugin/img/portofolio-img/Wedding-1.png"),
         image2:require("../../plugin/img/portofolio-img/Wedding-2.png"),
         image3:require("../../plugin/img/portofolio-img/Wedding-3.png"),
-        link:"https://justnitha.github.io",
-        code:"https://github.com/justnitha/justnitha.github.io",
+        link:"https://justnitha.github.io/undangan",
+        code:"https://github.com/justnitha/undangan",
     },
     {
         id:3,
