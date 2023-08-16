@@ -1,4 +1,4 @@
-import React, { useState, useEffect,  } from "react";
+import React, { useState, useEffect} from "react";
 import "../plugin/css/Navbar.css";
 
 const Navbar = ({darkMode, toogleDarkMode, scrollToHome, scrollToSkills, scrollToBlog, scrollToContact}) => {

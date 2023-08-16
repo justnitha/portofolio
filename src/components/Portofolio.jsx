@@ -13,7 +13,10 @@ const Portofolio = ({darkMode,blogLinkRef}) => {
   const [viewMoreClicked, setViewMoreClicked] = useState(false); // State untuk melacak apakah tombol "view more" telah ditekan
   const scrollTargetRef = useRef(null); // Referensi untuk elemen target yang akan di-scroll
  
-  
+  const handleStopClick = (e) => {
+    // Menghentikan event dari merambat ke elemen di atasnya
+    e.stopPropagation();
+  };
   
   const handleOpenModal = (itemId) => {
     setSelectedItemId(itemId);
@@ -39,6 +42,7 @@ const Portofolio = ({darkMode,blogLinkRef}) => {
     }
   
   }
+  
   return (
     <div className={`px-10 mx-auto mt-32 ${isModalOpen ? "" : ""}`} ref={blogLinkRef}>
       <h1 className={`uppercase text-center text-3xl md:text-5xl lg:text-5xl font-bold ${darkMode ? "text-white" : "text-black"}`}>portofolio </h1>
@@ -83,12 +87,11 @@ const Portofolio = ({darkMode,blogLinkRef}) => {
               <h1 className="text-2xl font-bold mt-3">{item.judul}</h1>
               <p className="mt-5">{item.paragraf}</p>
               <h1 className="font-bold mt-10">
-                <a href={item.link}>
-                  {" "}
-                  See project{" "}
+                <a href={item.link} onClick={handleStopClick}>
+                  See project
                 </a>
               </h1>
-              <div className="">
+              <div>
                 <img
                   src={`${boba}`}
                   alt=""
