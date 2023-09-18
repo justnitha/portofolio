@@ -1,7 +1,6 @@
 import { Portofolio1 } from "./Sheat/Porto";
 import React, { useState, useRef } from "react";
 import boba from "../plugin/img/boba.png";
-// import "../plugin/css/Portofolio.css";
 import Zoom from "./Zoom";
 
 const Portofolio = ({darkMode,blogLinkRef}) => {

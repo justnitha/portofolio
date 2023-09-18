@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Portofolio1 } from "./Sheat/Porto";
-// import "../plugin/css/Portofolio.css";
 
 const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -137,10 +136,10 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                       </div>
                       <div className="flex items-center mt-16 justify-center gap-10">
                         <button className="uppercase">
-                          <a href={item.link}>lihat project</a>
+                          <a href={item.link} className="bg-hijau hover:bg-[#5C8374] text-white px-4 py-2 rounded-md">lihat project</a>
                         </button>
                         <button className="uppercase">
-                          <a href={item.code}>lihat code</a>
+                          <a href={item.code} className="hover:bg-[#090580] bg-[#337CCF] text-white px-4 py-2 rounded-md">lihat code</a>
                         </button>
                       </div>
                     </div>
