@@ -1,5 +1,5 @@
 import React from "react";
-import "../plugin/css/Home.css"
+// import "../plugin/css/Home.css"
 
 const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
     return(
@@ -31,7 +31,7 @@ const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
             <div className="-mt-16 md:mt-10 lg:-mt-0 lg:h-screen h-[70vh] bg-cover bg-no-repeat lg:w-[50]"
             //  style={{backgroundImage:`url(${splash})`,}}
              >
-                <img src={require("../plugin/img/foto-brand.png")} alt="brand" className="lg:h-[80vh] h-[50vh] md:h-[60vh] mt-24 lg:mt-0 lg:ms-auto mx-auto" />
+                <img src={require("../plugin/img/ajust-foto-profil.png")} alt="brand" className="lg:h-[80vh] h-[50vh] md:h-[60vh] mt-24 lg:mt-0 lg:ms-auto mx-auto" />
             </div>
 
             {/* app */}

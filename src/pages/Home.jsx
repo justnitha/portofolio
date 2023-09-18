@@ -5,6 +5,7 @@ import Skil from "../components/Skils"
 import Portofolio from "../components/Portofolio"
 import SignupForm from "../components/Form"
 
+
 function Home () {
     const [darkMode, setDarkMode] = useState(false);
 

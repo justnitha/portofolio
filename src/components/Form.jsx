@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useFormik } from 'formik';
 import { ContactSchema } from '../Schema/Contact';
-import "../plugin/css/Portofolio.css";
+// import "../plugin/css/Portofolio.css";
 
 
 const SignupForm = ({darkMode,contactLinkRef}) => {
@@ -154,7 +154,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4  hover:border-white border-2 border-black  rounded-3xl uppercase box-shadw ${darkMode ? "text-white" : "text-black"}`}>
+                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 hover:border-white border-2 border-black rounded-3xl uppercase box-shadw ${darkMode ? "bg-white" : "text-black  "}`}>
                     send massege
                   </button>
                 </div>

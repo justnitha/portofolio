@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Portofolio1 } from "./Sheat/Porto";
-import "../plugin/css/Portofolio.css";
+// import "../plugin/css/Portofolio.css";
 
 const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   const [selectedOption, setSelectedOption] = useState("");

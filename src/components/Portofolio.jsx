@@ -1,7 +1,7 @@
 import { Portofolio1 } from "./Sheat/Porto";
 import React, { useState, useRef } from "react";
 import boba from "../plugin/img/boba.png";
-import "../plugin/css/Portofolio.css";
+// import "../plugin/css/Portofolio.css";
 import Zoom from "./Zoom";
 
 const Portofolio = ({darkMode,blogLinkRef}) => {
@@ -112,14 +112,14 @@ const Portofolio = ({darkMode,blogLinkRef}) => {
      <div className="text-center md:mt-16 mt-10">
      {viewMoreClicked ? (
           <button
-            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw outline outline-2 outline-black border-2 hover:border-white"
+            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw border-black border-2 hover:border-white"
             onClick={handleResetViewMore}
           >
             Reset View
           </button>
         ) : (
           <button
-            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw outline outline-2 outline-black border-2 hover:border-white"
+            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw border-black border-2 hover:border-white"
             onClick={handleViewMore}
           >
             View more
