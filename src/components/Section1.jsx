@@ -1,5 +1,5 @@
 import React from "react";
-// import "../plugin/css/Home.css"
+
 
 const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
     return(
@@ -36,7 +36,7 @@ const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
 
             {/* app */}
             <div className={`hidden md:block lg:hidden text-center text-2xl ${darkMode ? "text-white" : "text-black"}`}>
-                    <p className=" leading-8 text-abu-abu">
+                    <p className=" leading-8 text-white">
                         From Indonesia, Bali. I have rich experience in web design. <br /> I love to talk  with you about our unique. 
                     </p>
                     <ul className="flex items-center gap-5 text-3xl py-7 mt-5 justify-center">
