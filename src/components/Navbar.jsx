@@ -63,7 +63,7 @@ const Navbar = ({
 
   return (
     <nav
-      className={`flex items-center justify-between fixed top-0 left-0 w-full px-10 py-10 text-xl sm:text-3xl md:text-3xl lg:text-3xl z-20${
+      className={`flex items-center justify-between fixed top-0 left-0 w-full px-10 lg:py-10 md:py-10 text-xl sm:text-3xl md:text-3xl lg:text-3xl z-20${
         openNav ? "" : ""
       } ${scrollNavbar && darkMode ? "bg-black text-white" : "" || scrollNavbar ? "bg-white" : ""}`}
     >
