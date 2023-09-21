@@ -5,7 +5,7 @@ import Zoom from "./Zoom";
 
 const Portofolio = ({darkMode,blogLinkRef}) => {
   const [hoverItem, setHoverItem] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState(null);
   const [visibleImages, setVisibleImages] = useState(3); // State untuk jumlah gambar yang ditampilkan

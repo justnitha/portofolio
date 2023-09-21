@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Portofolio1 } from "./Sheat/Porto";
 
 const Zoom = ({ isOpen, onClose, selectedItemId }) => {
-  const [selectedOption, setSelectedOption] = useState("");
+  // const [selectedOption, setSelectedOption] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
   // const handleOptionChange = (event) => {
   //   setSelectedOption(event.target.value);
@@ -102,9 +102,9 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
               return (
                 <div key={item.id}>
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg-white h-[29rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
+                    className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg-white h-[35rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
                   >
-                    <Slider {...settings} className="w-[80%] mx-auto mt-5 lg:mt-10">
+                    <Slider {...settings} className="w-[80%] mx-auto mt-5 lg:mt-10 md:mt-16">
                       <img
                         src={item.image}
                         alt="gambar1"
@@ -134,7 +134,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                         <p className="mt-7 font-bold">Objek Duplikat : <a href={`${item.href}`} className="font-normal">{item.objek}</a> </p>
                         <p className="mt-4 font-bold">Tujuan : <span className="font-normal">{item.Tujuan}</span></p>
                       </div>
-                      <div className="flex items-center mt-16 justify-center gap-10">
+                      <div className="flex items-center mt-16 justify-center lg:gap-10 gap-2">
                         <button className="uppercase">
                           <a href={item.link} className="bg-hijau hover:bg-[#5C8374] text-white px-4 py-2 rounded-md">lihat project</a>
                         </button>
