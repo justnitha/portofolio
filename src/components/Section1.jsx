@@ -3,7 +3,7 @@ import React from "react";
 
 const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
     return(
-        <div className="lg:flex px-10 justify-between items-center py-10 lg:py-0"  ref={homeLinkRef}>
+        <div className="lg:flex lg:mt-20 px-10 justify-between items-center py-10 lg:py-0"  ref={homeLinkRef}>
             <div className="lg:w-[50%] lg:-mt-28 md:mt-10 sm:mt-20 mt-12 text-center lg:text-start ">
                 <div className=" uppercase">
                     <h1 className={`font-semibold ${darkMode ? "text-white" : "text-black "}`}>Hello, <span className="text-hijau">my name is</span></h1>

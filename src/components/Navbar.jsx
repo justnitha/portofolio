@@ -8,6 +8,7 @@ const Navbar = ({
   scrollToSkills,
   scrollToBlog,
   scrollToContact,
+  isModalOpen
 }) => {
   const [openNav, SetOpenNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +69,7 @@ const Navbar = ({
       } ${scrollNavbar && darkMode ? "bg-black text-white" : "" || scrollNavbar ? "bg-white" : ""}`}
     >
       <div
-        className={`uppercase font-bold fixed top-5 left-10 hidden lg:block md:block cursor-default
+        className={`uppercase font-bold fixed top-5 left-10 hidden lg:block md:block  cursor-pointer hover:animate-bounce
         ${openNav && darkMode ? "text-white" : "text-black"} 
         ${darkMode ? "text-white" : ""}`}
         onClick={(e) => {
@@ -87,7 +88,7 @@ const Navbar = ({
               : "bg-white h-screen fixed top-0 right-0"
           }`}
         >
-          <div>
+          <div className={`${isModalOpen ? "hidden" : ""}`}>
             {openNav ? (
               <div className="fixed top-5 right-14 z-10 ">
                 <i class="fa-solid fa-xmark" onClick={toggleNavbar}></i>

@@ -17,7 +17,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   };
   const CustomPrevArrow = (props) => (
     <button
-      className={`absolute top-[12.5rem] left-5 cursor-pointer z-10 text-black hidden`}
+      className={`absolute top-[12.5rem] left-5 cursor-pointer z-10 hidden`}
       onClick={props.onClick}
     >
       <i class="fa-solid fa-chevron-left fa-xl"></i>
@@ -26,7 +26,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
 
   const CustomNextArrow = (props) => (
     <button
-      className={`absolute right-5 bottom-[13.5rem] text-black hidden`}
+      className={`absolute right-5 bottom-[13.5rem] hidden`}
       onClick={props.onClick}
     >
       <i class="fa-solid fa-chevron-right fa-xl"></i>
@@ -40,7 +40,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
     ),
     customPaging: (index) => (
       <div
-        className={`custom-dot-quick mt-[5px] lg:-mt-[30px] ${
+        className={`custom-dot-quick lg:-mt-[100px] ${
           index === activeIndex ? "active " : ""
         }`}
       />
@@ -102,23 +102,23 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
               return (
                 <div key={item.id}>
                   <div
-                    className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg-white h-[35rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
+                    className={`bg-amber-50 rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg- h-[35rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
                   >
                     <Slider {...settings} className="w-[80%] mx-auto mt-5 lg:mt-10 md:mt-16">
                       <img
                         src={item.image}
                         alt="gambar1"
-                        className="lg:h-[20rem] object-contain"
+                        className="lg:mt-16 object-contain cursor-pointer"
                       />
                       <img
                         src={item.image2}
                         alt="gambar2"
-                        className="lg:h-[20rem] object-contain"
+                        className="lg:mt-16 object-contain cursor-pointer"
                       />
                       <img
                         src={item.image3}
                         alt="gambar3"
-                        className="lg:h-[20rem] object-contain"
+                        className="lg:mt-16 object-contain cursor-pointer"
                       />
                     </Slider>
                     <div className="lg:mt-10 lg:pe-10 px-5 md:text-2xl lg:text-xl ">

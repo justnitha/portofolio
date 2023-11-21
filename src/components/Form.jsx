@@ -13,8 +13,8 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
       alert("Please accept the terms and conditions before sending the message.");
       return;
     }
-    console.log(values);
-    console.log(actions);
+    // console.log(values);
+    // console.log(actions);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm()
     setIsAccepted(false)
@@ -154,7 +154,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 hover:border-white border-2 border-black rounded-3xl uppercase box-shadw ${darkMode ? "bg-white" : "text-black  "}`}>
+                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 focus:ring-4 focus:ring-blue-400  bg-hijau rounded-3xl uppercase  ${darkMode ? "bg-white text-black" : "bg-black  text-white"}`}>
                     send massege
                   </button>
                 </div>

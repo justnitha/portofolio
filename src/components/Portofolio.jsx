@@ -3,10 +3,10 @@ import React, { useState, useRef } from "react";
 import boba from "../plugin/img/boba.png";
 import Zoom from "./Zoom";
 
-const Portofolio = ({darkMode,blogLinkRef}) => {
+const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
   const [hoverItem, setHoverItem] = useState(null);
   // const [isHovered, setIsHovered] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const [selectedItemId, setSelectedItemId] = useState(null);
   const [visibleImages, setVisibleImages] = useState(3); // State untuk jumlah gambar yang ditampilkan
   const [viewMoreClicked, setViewMoreClicked] = useState(false); // State untuk melacak apakah tombol "view more" telah ditekan
@@ -27,7 +27,7 @@ const Portofolio = ({darkMode,blogLinkRef}) => {
     setIsModalOpen(false);  
   };
   const handleViewMore = () => {
-    setVisibleImages((prevCount) => prevCount + 3); // Menambahkan 6 gambar setiap kali tombol "view more" ditekan
+    setVisibleImages((prevCount) => prevCount + 10); // Menambahkan 6 gambar setiap kali tombol "view more" ditekan
     setViewMoreClicked(true);
     if (scrollTargetRef.current) {
       scrollTargetRef.current.scrollIntoView({ behavior: "smooth" });

@@ -3,8 +3,8 @@ import Skill from "./Sheat/SkilcoM"
 
 const Skil =  ({darkMode, skillsLinkRef}) =>{
     return(
-        <div className={`px-10 mx-auto lg:mt-20 -mt-10 sm:mt-32  ${darkMode ? "text-white" : "text-black"}`} ref={skillsLinkRef}>
-            <h1 className="uppercase text-center lg:text-5xl text-2xl md:text-5xl font-bold">profesional Skills </h1>
+        <div className={`px-10 mx-auto lg:mt-8 -mt-10 sm:mt-32  ${darkMode ? "text-white" : "text-black"}`}>
+            <h1 className="uppercase text-center lg:text-5xl text-2xl md:text-5xl font-bold" ref={skillsLinkRef}>profesional Skills </h1>
             <p className=" text-hijau font-bold text-center mt-7">MY <span className={`decor text-3xl tracking-widest ${darkMode ? "text-white" : "text-black"}`}>Talent</span></p>
             <div className="gap-10 grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 mt-16">
                 <Skill 

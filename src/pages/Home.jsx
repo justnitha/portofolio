@@ -8,6 +8,7 @@ import SignupForm from "../components/Form"
 
 function Home () {
     const [darkMode, setDarkMode] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -52,6 +53,7 @@ function Home () {
               scrollToSkills={scrollToSkills}
               scrollToBlog={scrollToBlog}
               scrollToContact={scrollToContact}
+              isModalOpen={isModalOpen}
             />
             <Perkenalan 
               darkMode={darkMode} 
@@ -65,6 +67,8 @@ function Home () {
             <Portofolio 
               darkMode={darkMode} 
               blogLinkRef={blogLinkRef} 
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
             />
             <SignupForm 
               darkMode={darkMode} 
