@@ -5,11 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Portofolio1 } from "./Sheat/Porto";
 
 const Zoom = ({ isOpen, onClose, selectedItemId }) => {
-  // const [selectedOption, setSelectedOption] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
-  // const handleOptionChange = (event) => {
-  //   setSelectedOption(event.target.value);
-  // };
 
   // Fungsi untuk menutup modal
   const handleClose = () => {
@@ -20,7 +16,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
       className={`absolute top-[12.5rem] left-5 cursor-pointer z-10 hidden`}
       onClick={props.onClick}
     >
-      <i class="fa-solid fa-chevron-left fa-xl"></i>
+      <i className="fa-solid fa-chevron-left fa-xl"></i>
     </button>
   );
 
@@ -29,7 +25,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
       className={`absolute right-5 bottom-[13.5rem] hidden`}
       onClick={props.onClick}
     >
-      <i class="fa-solid fa-chevron-right fa-xl"></i>
+      <i className="fa-solid fa-chevron-right fa-xl"></i>
     </button>
   );
   const settings = {
@@ -85,26 +81,26 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
   return (
     <div>
       {isOpen && (
-        <div className="fixed w-full bg-black opacity-30 left-0 top-0 h-full z-20"
+        <div className="fixed w-full bg-black opacity-40 left-0 top-0 h-full z-20"
           onClick={handleClose} 
         ></div>
       )}
       {isOpen && (
         <i
-        class="fa-solid fa-xmark cursor-pointer top-0 text-white fixed right-10 pt-5 fa-2x z-20"
+        className="fa-solid fa-xmark cursor-pointer top-0 text-white fixed right-10 pt-5 fa-2x z-20"
         onClick={handleClose}
         ></i>
       )}
       {isOpen && (
-        <div className=" top-20 left-10 md:top-32 lg:top-[none] lg:left-[none] lg:inset-[9rem] mx-auto h-[29rem] md:h-[50rem] lg:h-[29rem] z-50 fixed w-[78%] md:w-[90%] lg:w-[65%]">
+        <div className=" top-[9rem] left-10 md:top-32 lg:top-[none] lg:left-[none] lg:inset-[9rem] mx-auto h-[29rem] md:h-[50rem] lg:h-[29rem] z-50 fixed w-[78%] md:w-[90%] lg:w-[65%]">
           {Portofolio1.map((item) => {
             if (item.id === selectedItemId) {
               return (
                 <div key={item.id}>
                   <div
-                    className={`bg-amber-50 rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg- h-[35rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
+                    className={`bg-amber-50 rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg- h-[22rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
                   >
-                    <Slider {...settings} className="w-[80%] mx-auto mt-5 lg:mt-10 md:mt-16">
+                    <Slider {...settings} className="w-[80%] mx-auto mt-10 lg:mt-10 md:mt-16">
                       <img
                         src={item.image}
                         alt="gambar1"
@@ -130,22 +126,25 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                         </span>
                       </h1>
                       
-                      <div>
+                      <div className="lg:block hidden">
                         <p className="mt-7 font-bold">Objek Duplikat : <a href={`${item.href}`} className="font-normal">{item.objek}</a> </p>
                         <p className="mt-4 font-bold">Tujuan : <span className="font-normal">{item.Tujuan}</span></p>
                       </div>
-                      <div className="flex items-center mt-16 justify-center lg:gap-10 gap-2 text-xs sm:text-sm md:text-base lg:text-base">
+                      <div className="flex items-center mt-16 justify-center lg:gap-10 gap-2 text-sm sm:text-sm md:text-base lg:text-base">
                         <button className="uppercase">
-                          <a href={item.link} className="bg-hijau hover:bg-[#5C8374] text-white px-4 py-2 rounded-md">lihat project</a>
+                          <a href={item.link} className="bg-hijau hover:bg-[#62ad90] focus:ring-4 focus:ring-green-200 text-white px-4 py-3 rounded-md">lihat project</a>
                         </button>
                         <button className="uppercase">
-                          <a href={item.code} className="hover:bg-[#090580] bg-[#337CCF] text-white px-4 py-2 rounded-md">lihat code</a>
+                          <a href={item.code} className="hover:bg-[#4eabcf] bg-[#337CCF] focus:ring-4 focus:ring-blue-200 text-white px-4 py-3 rounded-md">lihat code</a>
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
               );
+            }
+            else {
+              return ""
             }
           })}
         </div>

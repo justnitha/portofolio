@@ -15,9 +15,9 @@ const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
                         From Indonesia, Bali. I have rich experience in web design. <br /> I love to talk  with you about our unique. 
                     </p>
                     <ul className="flex items-center gap-5 text-2xl py-7">
-                        <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                        <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                        <li className="hover:text-hijau"><a href="https://github.com/justnitha/portofolio"><i class="fa-brands fa-github"></i></a></li>
+                        <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-twitter"></i></a></li>
+                        <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-instagram"></i></a></li>
+                        <li className="hover:text-hijau"><a href="https://github.com/justnitha"><i className="fa-brands fa-github"></i></a></li>
                     </ul>
                     <div className="flex uppercase font-bold mt-5 items-center gap-10">
                         <div className="flex items-center">
@@ -40,9 +40,9 @@ const Perkenalan =  ({darkMode,homeLinkRef,scrollToSkills})=> {
                         From Indonesia, Bali. I have rich experience in web design. <br /> I love to talk  with you about our unique. 
                     </p>
                     <ul className="flex items-center gap-5 text-3xl py-7 mt-5 justify-center">
-                        <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                        <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                        <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-github"></i></a></li>
+                        <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-twitter"></i></a></li>
+                        <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-instagram"></i></a></li>
+                        <li className="hover:text-hijau"><a href="https://github.com/justnitha"><i className="fa-brands fa-github"></i></a></li>
                     </ul>
                     <div className="flex uppercase font-bold mt-5 items-center  gap-10">
                         <div className="flex items-center">

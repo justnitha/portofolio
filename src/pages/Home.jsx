@@ -79,9 +79,9 @@ function Home () {
                 <div className="flex items-center justify-between px-10  py-10">
                     <div className=" w-[25%]">
                         <ul className="flex items-center gap-5 lg:text-2xl py-7">
-                            <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                            <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                            <li className="hover:text-hijau"><a href=""><i class="fa-brands fa-github"></i></a></li>
+                            <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-twitter"></i></a></li>
+                            <li className="hover:text-hijau"><a href="/"><i className="fa-brands fa-instagram"></i></a></li>
+                            <li className="hover:text-hijau"><a href="https://github.com/justnitha"><i className="fa-brands fa-github"></i></a></li>
                         </ul>
                     </div>
                     <div className=" w-[50%] text-center hidden lg:block">

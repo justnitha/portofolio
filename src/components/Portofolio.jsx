@@ -75,7 +75,7 @@ const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
                     className="absolute lg:ms-[19rem] hidden lg:block ms-[11rem] mt-5 border-2 hover:text-white hover:bg-hijau hover:border-white py-2 px-3 rounded-[3rem] perbesar outline-2 outline outline-black transisi"
                     onClick={() => handleOpenModal(item.id)}
                   >
-                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                    <i className="fa-solid fa-up-right-and-down-left-from-center"></i>
                   </button>
                   <div className="perbesar"></div>
                 </div>
@@ -99,6 +99,7 @@ const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
               </div>
             </div>
             <Zoom
+            ref={scrollTargetRef}
               isOpen={isModalOpen}
               onClose={handleCloseModal}
               selectedItemId={selectedItemId}
@@ -106,7 +107,7 @@ const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
           </div>
         ))}
           {/* target untuk scroll smoth pas klik view more */}
-         <div ref={scrollTargetRef}></div>
+         {/* <div ref={scrollTargetRef}></div> */}
       </div>
      <div className="text-center md:mt-16 mt-10">
      {viewMoreClicked ? (

@@ -66,10 +66,10 @@ const Navbar = ({
     <nav
       className={`flex items-center justify-between fixed top-0 left-0 w-full px-10 lg:py-10 md:py-10 text-xl sm:text-3xl md:text-3xl lg:text-3xl z-20${
         openNav ? "" : ""
-      } ${scrollNavbar && darkMode ? "bg-black text-white" : "" || scrollNavbar ? "bg-white" : ""}`}
+      } ${scrollNavbar && darkMode ? "bg-black text-white" : "" || scrollNavbar ? "bg-white " : ""}`}
     >
       <div
-        className={`uppercase font-bold fixed top-5 left-10 hidden lg:block md:block  cursor-pointer hover:animate-bounce
+        className={`uppercase font-bold fixed top-5 left-10 hidden lg:block md:block
         ${openNav && darkMode ? "text-white" : "text-black"} 
         ${darkMode ? "text-white" : ""}`}
         onClick={(e) => {
@@ -91,7 +91,7 @@ const Navbar = ({
           <div className={`${isModalOpen ? "hidden" : ""}`}>
             {openNav ? (
               <div className="fixed top-5 right-14 z-10 ">
-                <i class="fa-solid fa-xmark" onClick={toggleNavbar}></i>
+                <i className="fa-solid fa-xmark" onClick={toggleNavbar}></i>
               </div>
             ) : (
               <div
@@ -100,10 +100,10 @@ const Navbar = ({
                 }`}
               >
                 <i
-                  class={`fa-regular ${darkMode ? "fa-sun" : "fa-moon"}`}
+                  className={`fa-regular ${darkMode ? "fa-sun" : "fa-moon"}`}
                   onClick={toogleDarkMode}
                 ></i>
-                <i class="fa-solid fa-bars" onClick={toggleNavbar}></i>
+                <i className="fa-solid fa-bars" onClick={toggleNavbar}></i>
               </div>
             )}
           </div>
@@ -164,15 +164,15 @@ const Navbar = ({
           >
             trajuszt
           </div>
-          <div className="flex gap-3">
+          <div className={`${isModalOpen ? "hidden" : "flex gap-3"}`}>
             <i
-              class={`fa-regular cursor-pointer ${
+              className={`fa-regular cursor-pointer ${
                 darkMode ? "fa-sun text-white" : "fa-moon"
               }`}
               onClick={toogleDarkMode}
             ></i>
             <i
-              class={`fa-solid fa-bars cursor-pointer ${
+              className={`fa-solid fa-bars cursor-pointer ${
                 darkMode ? "text-white" : ""
               }`}
               onClick={toggleDropdown}
