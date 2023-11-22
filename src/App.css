@@ -63,8 +63,7 @@
 .box-shadw:hover{
     background:#52a388;
     color:white;
-    outline-width: 2px;
-    outline-style: solid;
+    
 }
 /* skill */
 .bg-shadow {

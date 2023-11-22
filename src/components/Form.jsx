@@ -142,7 +142,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
               </div>
               <div className='mt-4 relative'>
                 <div>
-                  <label htmlFor="Accept" className={`text-sm md:text-base lg:text-base ms-5  ${darkMode ? "text-white" : "text-black"}`}> I accepttext-sm  the terms and conditions</label>
+                  <label htmlFor="Accept" className={`text-sm md:text-base lg:text-base lg:ms-5  ${darkMode ? "text-white" : "text-black"}`}> I accepttext-sm  the terms and conditions</label>
                   <input
                     type="checkbox"
                     name="Accept"
@@ -150,11 +150,11 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                     value={values.Accept}
                     checked={isAccepted}
                     onChange={() => setIsAccepted(!isAccepted)}
-                    className={`text-start ms-3 ${errors.Accept && touched.Accept ? "input-error":""}`}
+                    className={`text-start  ms-3 ${errors.Accept && touched.Accept ? "input-error":""}`}
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className="py-3 px-9 text-lg font-semibold bg-white rounded-3xl box-shadw border-black border-2 capitalize focus:ring-4 focus:ring-green-400 focus:border-none absolute right-0 top-0">
+                  <button disabled={isSubmitting} type="submit" className="py-3 px-9 text-lg font-semibold bg-white rounded-3xl box-shadw border-black border-2 capitalize focus:ring-4 focus:ring-green-400 focus:border-none lg:absolute right-0 top-0 mt-2 ">
                     send massege
                   </button>
                 </div>

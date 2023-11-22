@@ -131,12 +131,12 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                         <p className="mt-4 font-bold">Tujuan : <span className="font-normal">{item.Tujuan}</span></p>
                       </div>
                       <div className="flex items-center mt-16 justify-center lg:gap-10 gap-2 text-sm sm:text-sm md:text-base lg:text-base">
-                        <button className="uppercase">
+                        <div className="uppercase">
                           <a href={item.link} className="bg-hijau hover:bg-[#62ad90] focus:ring-4 focus:ring-green-200 text-white px-4 py-3 rounded-md">lihat project</a>
-                        </button>
-                        <button className="uppercase">
+                        </div>
+                        <div className="uppercase">
                           <a href={item.code} className="hover:bg-[#4eabcf] bg-[#337CCF] focus:ring-4 focus:ring-blue-200 text-white px-4 py-3 rounded-md">lihat code</a>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
