@@ -140,9 +140,9 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                 />
                 {errors.Massage && touched.Massage && (<p className="error ms-5 text-red-500">{errors.Massage}</p>)}
               </div>
-              <div className='mt-3 lg:flex items-center justify-end gap-7'>
+              <div className='mt-4 relative'>
                 <div>
-                  <label htmlFor="Accept" className={`text-sm md:text-base lg:text-base ms-5 ${darkMode ? "text-white" : "text-black"}`}> I accepttext-sm  the terms and conditions</label>
+                  <label htmlFor="Accept" className={`text-sm md:text-base lg:text-base ms-5  ${darkMode ? "text-white" : "text-black"}`}> I accepttext-sm  the terms and conditions</label>
                   <input
                     type="checkbox"
                     name="Accept"
@@ -150,11 +150,11 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
                     value={values.Accept}
                     checked={isAccepted}
                     onChange={() => setIsAccepted(!isAccepted)}
-                    className={`ms-3 ${errors.Accept && touched.Accept ? "input-error":""}`}
+                    className={`text-start ms-3 ${errors.Accept && touched.Accept ? "input-error":""}`}
                     />
                 </div>
                 <div>
-                  <button disabled={isSubmitting} type="submit" className={`block mx-auto py-2 px-6 mt-7 lg:mt-4 focus:ring-4 focus:ring-blue-400  bg-hijau rounded-3xl uppercase  ${darkMode ? "bg-white text-black" : "bg-black  text-white"}`}>
+                  <button disabled={isSubmitting} type="submit" className="py-3 px-9 text-lg font-semibold bg-white rounded-3xl box-shadw border-black border-2 capitalize focus:ring-4 focus:ring-green-400 focus:border-none absolute right-0 top-0">
                     send massege
                   </button>
                 </div>

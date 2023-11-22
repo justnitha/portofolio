@@ -99,7 +99,7 @@ const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
               </div>
             </div>
             <Zoom
-            ref={scrollTargetRef}
+            // ref={scrollTargetRef}
               isOpen={isModalOpen}
               onClose={handleCloseModal}
               selectedItemId={selectedItemId}
@@ -112,14 +112,14 @@ const Portofolio = ({darkMode,blogLinkRef,isModalOpen, setIsModalOpen}) => {
      <div className="text-center md:mt-16 mt-10">
      {viewMoreClicked ? (
           <button
-            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw border-black border-2 hover:border-white"
+            className="py-3 px-9 text-lg font-semibold bg-white rounded-3xl box-shadw border-black border-2 capitalize "
             onClick={handleResetViewMore}
           >
             Reset View
           </button>
         ) : (
           <button
-            className="py-3 px-9 text-xl font-semibold bg-white rounded-3xl box-shadw border-black border-2 hover:border-white"
+            className="py-3 px-9 text-lg font-semibold bg-white rounded-3xl box-shadw border-black border-2 capitalize  "
             onClick={handleViewMore}
           >
             View more

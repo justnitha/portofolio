@@ -101,9 +101,9 @@
   
 .box-shadw:hover{
     background:#52a388;
-    color:white;
+    /* color:white;
     outline-width: 2px;
-    outline-style: solid;
+    outline-style: solid; */
 }
 
 /* Form css */
