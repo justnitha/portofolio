@@ -36,7 +36,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
     ),
     customPaging: (index) => (
       <div
-        className={`custom-dot-quick lg:-mt-[100px] ${
+        className={`custom-dot-quick -mt-[40px] lg:-mt-[100px] ${
           index === activeIndex ? "active " : ""
         }`}
       />
@@ -66,6 +66,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
           slidesToScroll: 1,
           initialSlide: 2,
           infinite: true,
+          dots: true
         }
       },
       {
@@ -74,6 +75,7 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
+          dots: true
         }
       }
     ]
@@ -92,13 +94,13 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
         ></i>
       )}
       {isOpen && (
-        <div className=" top-[9rem] left-10 md:top-32 lg:top-[none] lg:left-[none] lg:inset-[9rem] mx-auto h-[29rem] md:h-[50rem] lg:h-[29rem] z-50 fixed w-[78%] md:w-[90%] lg:w-[65%]">
+        <div className="top-[9rem] left-10 md:top-32 lg:top-[none] lg:left-[none] lg:inset-[9rem] mx-auto h-[22rem] md:h-[50rem] lg:h-[29rem] z-50 fixed w-[78%] md:w-[90%] lg:w-[65%]">
           {Portofolio1.map((item) => {
             if (item.id === selectedItemId) {
               return (
                 <div key={item.id}>
                   <div
-                    className={`bg-amber-50 rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 bg- h-[22rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
+                    className={`bg-amber-50 rounded-2xl grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 h-[22rem] md:h-[50rem] lg:h-[29rem]  mx-auto`}
                   >
                     <Slider {...settings} className="w-[80%] mx-auto mt-10 lg:mt-10 md:mt-16">
                       <img
@@ -130,13 +132,16 @@ const Zoom = ({ isOpen, onClose, selectedItemId }) => {
                         <p className="mt-7 font-bold">Objek Duplikat : <a href={`${item.href}`} className="font-normal">{item.objek}</a> </p>
                         <p className="mt-4 font-bold">Tujuan : <span className="font-normal">{item.Tujuan}</span></p>
                       </div>
-                      <div className="flex items-center mt-16 justify-center lg:gap-10 gap-2 text-sm sm:text-sm md:text-base lg:text-base">
-                        <div className="uppercase">
-                          <a href={item.link} className="bg-hijau hover:bg-[#62ad90] focus:ring-4 focus:ring-green-200 text-white px-4 py-3 rounded-md">lihat project</a>
+                      <div 
+                      className=""
+                      // className="lg:flex items-center mt-16 bg-red-500 justify-center lg:gap-10 gap-2 text-sm sm:text-sm md:text-base lg:text-base"
+                      >
+                        <div className="uppercase text-center">
+                          <a href={item.link} className="bg-hijau  hover:bg-[#62ad90] focus:ring-4 focus:ring-green-200 text-white px-4 py-3 rounded-md">lihat project</a>
                         </div>
-                        <div className="uppercase">
+                        {/* <div className="uppercase">
                           <a href={item.code} className="hover:bg-[#4eabcf] bg-[#337CCF] focus:ring-4 focus:ring-blue-200 text-white px-4 py-3 rounded-md">lihat code</a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

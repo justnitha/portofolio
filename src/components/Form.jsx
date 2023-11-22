@@ -44,7 +44,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
       <div className='lg:flex items-start justify-between mt-10'>
         <div className='w-[30%] lg:block hidden'>
           <div className='flex items-center mt-4'>
-            <i className="fa-regular fa-map px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
+            <i className="fa-regular hover:animate-pulse fa-map px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
             <div className={`w-[20%] h-[2px] bg-black ${darkMode ? "bg-white" : "bg-black"}`}></div>
             <div  className={` ${darkMode ? "text-white" : "text-black"}`}>
               <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Address</h1>
@@ -52,7 +52,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
             </div>
           </div>
           <div className='flex items-center mt-10'>
-            <i className="fa-regular fa-user px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
+            <i className="fa-regular hover:animate-bounce fa-user px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
             <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
             <div className={` ${darkMode ? "text-white" : "text-black"}`}>
               <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Pekerjaan</h1>
@@ -60,7 +60,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
             </div>
           </div>
           <div className='flex items-center mt-10'>
-            <i className="fa-regular fa-envelope px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
+            <i className="fa-regular hover:animate-pulse fa-envelope px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
             <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
             <div className={` ${darkMode ? "text-white" : "text-black"}`}>
               <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Email</h1>
@@ -68,7 +68,7 @@ const SignupForm = ({darkMode,contactLinkRef}) => {
             </div>
           </div>
           <div className='flex items-center mt-10'>
-            <i className="fa-regular fa-address-book px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
+            <i className="fa-regular hover:animate-bounce fa-address-book px-4 py-6 fa-lg bg-white rounded-full border-black border-2 rounded-shadow"></i>
             <div className={`w-[21%] h-[2px] ${darkMode ? "bg-white" : "bg-black"}`}></div>
             <div className={` ${darkMode ? "text-white" : "text-black"}`}>
               <h1 className={`ms-10 decor text-3xl tracking-widest mb-2`}>Phone</h1>
